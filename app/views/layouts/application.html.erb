@@ -8,7 +8,11 @@
 </head>
 <body>
 
-<%= yield %>
+<%= render('layouts/header') %>
+<div id="container">
+  <% if not notice.nil? %><p class="notice"><%= notice %></p><% end %>
+  <%= yield %>
+</div>
 
 </body>
 </html>

@@ -1,15 +1,20 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, "Category #{@category.name}") %>
+<h2><%= @category.description %></h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% @category.parts.each do |part| %>
+  <tr>
+    <td><%= part.name %></td>
+    <td><%= part.description %></td>
+  </tr>
+  <% end %>
+</table>
 
 <p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @category.description %>
-</p>
-
-
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
+</p>
