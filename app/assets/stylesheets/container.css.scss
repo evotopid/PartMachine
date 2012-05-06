@@ -1,6 +1,21 @@
+// Defintions for the Style
+$lightGray: #dddddd;
+
+// Style for the container
 #container {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 0px 0px 10px 10px;
+  background-color: $lightGray;
+  
+  padding-top: 2px;
+  padding-bottom: 10px;
+  
+  h2 {
+    font-size: 10pt;
+  }
+  
+  div {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
