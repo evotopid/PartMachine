@@ -28,8 +28,14 @@ $headerBackgroundColor: black;
     } 
     
     span {
-      font-size: 15pt;
-      color: $headerTextColor;
+      a:link, a:visited, a:hover, a:active {
+        font-size: 15pt;
+        color: $headerTextColor;
+        text-decoration:none;
+      }
+      a:hover {
+        color: darken($headerTextColor,30%);
+      }
     }
   }
 }

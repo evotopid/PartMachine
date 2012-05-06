@@ -1,9 +1,10 @@
 module ApplicationHelper
   def full_title ( page_title )
+    title_link = link_to "PartMachine", root_url
     if page_title.nil? or page_title.empty?
-      "PartMachine"
+      title_link.html_safe
     else
-      "PartMachine > #{page_title}"
+      "#{title_link} > #{page_title}".html_safe
     end
   end
   

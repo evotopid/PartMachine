@@ -16,6 +16,11 @@ input[type=text] {
   padding: 2px;
 }
 
+select {
+  display: block;
+  width: 800px;
+}
+
 textarea {
   height: 300px;
   resize: none;
