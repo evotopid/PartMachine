@@ -1,13 +1,9 @@
-<p>
-  <b>Name:</b>
-  <%= @part.name %>
-</p>
+<% provide(:title, @part.name.capitalize) %>
 
 <p>
   <b>Description:</b>
   <%= @part.description %>
 </p>
-
 
 <%= link_to 'Edit', edit_part_path(@part) %> |
 <%= link_to 'Back', parts_path %>
