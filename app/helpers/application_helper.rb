@@ -14,7 +14,7 @@ module ApplicationHelper
   end
   
   def parts_grid ( parts )
-    @parts = parts
+    @parts = parts.sort
     render 'parts/grid'
   end
 end

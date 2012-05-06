@@ -1,3 +1,5 @@
 <% provide(:title, "All Parts") %>
 
+<%= search_field(:part, :name, {placeholder: "Search for parts"}) %>
+
 <%= parts_grid @parts %>
