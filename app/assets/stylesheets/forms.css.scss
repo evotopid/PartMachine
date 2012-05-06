@@ -1,0 +1,23 @@
+label {
+  font-size: 12pt;
+}
+
+input[type=text], textarea {
+  display: block;
+  width: 800px;
+  font-size: 14pt;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-family: Verdana;
+}
+
+input[type=text] {
+  height: 30px;
+  padding: 2px;
+}
+
+textarea {
+  height: 300px;
+  resize: none;
+  padding: 4px;
+}
