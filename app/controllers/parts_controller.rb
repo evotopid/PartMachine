@@ -9,7 +9,6 @@ class PartsController < ApplicationController
 
   def new
     @part = Part.new
-    @categories = Category.all
   end
 
   def edit
