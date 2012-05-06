@@ -1,5 +1,5 @@
 <%= form_for(@part) do |f| %>
-  <%= render('parts/save_error') %>
+  <%= save_errors @part %>
   
   <%= f.label :name %><br />
   <%= f.text_field :name %>

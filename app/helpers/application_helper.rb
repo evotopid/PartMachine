@@ -6,4 +6,9 @@ module ApplicationHelper
       "PartMachine > #{page_title}"
     end
   end
+  
+  def save_errors ( obj )
+    @obj = obj
+    render 'shared/save_error'
+  end
 end
