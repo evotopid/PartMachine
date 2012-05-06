@@ -14,7 +14,7 @@
   <tr>
     <td><%= part.name %></td>
     <td><%= part.description %></td>
-    <td><%= part.category.name if not part.category.nil? %></td>
+    <td><%= link_to part.category.name, part.category if not part.category.nil? %></td>
     <td><%= link_to 'Show', part %></td>
     <td><%= link_to 'Edit', edit_part_path(part) %></td>
     <td><%= link_to 'Destroy', part, confirm: 'Are you sure?', method: :delete %></td>
