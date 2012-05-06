@@ -1,23 +1,19 @@
 <% provide(:title, "All Categories") %>
 
-<ol id="categories">
+<ul id="categories">
   <% @categories.each do |category| %>
     <li onclick="redirectTo('<%= category_url category %>')">
       <div>
-        <span class="category_title">
+        <span class="title">
           <%= category.name %>
         </span>
         <br>
-        <span class="category_description">
+        <span class="description">
           <%= category.description %>
         </span>
       </div>
     </li>
   <% end %>
   
-  <li onclick="redirectTo('<%= new_category_url %>')">
-    <div>
-      <%= image_tag "add-category.png" %>
-    </div>
-  </li>
-</ol>
+  <li class="new" onclick="redirectTo('<%= new_category_url %>')"></li>
+</ul>
