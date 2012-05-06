@@ -1,4 +1,6 @@
 PartMachine::Application.routes.draw do
+  resources :categories
+
   resources :parts
 
   # The priority is based upon order of creation:
