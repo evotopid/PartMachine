@@ -10,5 +10,10 @@
   <%= @part.amount %>
 </p>
 
+<p>
+  <b>Category:</b>
+  <%= link_to @part.category.name, @part.category %>
+</p>
+
 <%= link_to 'Edit', edit_part_path(@part) %> |
 <%= link_to 'Back', parts_path %>
