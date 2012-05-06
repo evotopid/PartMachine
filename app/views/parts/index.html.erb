@@ -11,6 +11,13 @@
         <span class="description">
           <%= part.description %>
         </span>
+        <span class="amount">
+          <% if not defined? part.amount or part.amount.nil? %>
+            0x
+          <% else %>
+            <%= part.amount %>x
+          <% end %>
+        </span>
       </div>
     </li>
   <% end %>

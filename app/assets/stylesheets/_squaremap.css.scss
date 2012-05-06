@@ -25,7 +25,16 @@
     
     &:hover {
       background-color: white;
-    } 
+    }
+    
+    /* for the parts amount */
+    position: relative;
+    .amount {
+      position: absolute;
+      bottom: 6px;
+      right: 6px;
+      color: #666666;
+    }
   }
   
   .new {
