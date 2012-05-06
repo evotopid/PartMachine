@@ -1,0 +1,28 @@
+#categories {
+  padding-left: 0px;
+  margin: 5px 0px 0px 0px;
+  
+  li {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    padding: 10px; 
+    border: 1px solid gray;
+    margin-right: 4px;
+    margin-bottom: 10px;
+    
+    vertical-align: top;
+  
+    .category_title {
+      font-size: 16pt;
+    }
+    
+    div {
+      width: 160px;
+    }
+    
+    &:hover {
+      background-color: white;
+    }
+  }
+}

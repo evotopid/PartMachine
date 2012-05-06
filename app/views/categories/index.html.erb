@@ -1,24 +1,20 @@
-<h1>Listing categories</h1>
+<% provide(:title, "All Categories") %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= category.name %></td>
-    <td><%= category.description %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<ol id="categories">
+  <% @categories.each do |category| %>
+    <li onclick="redirectTo('<%= category_url category %>')">
+      <div>
+        <span class="category_title">
+          <%= category.name %>
+        </span>
+        <br>
+        <span class="category_description">
+          <%= category.description %>
+        </span>
+      </div>
+    </li>
+  <% end %>
+</ol>
 
 <br />
 
