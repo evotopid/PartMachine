@@ -12,4 +12,9 @@ module ApplicationHelper
     @obj = obj
     render 'shared/save_error'
   end
+  
+  def parts_grid ( parts )
+    @parts = parts
+    render 'parts/grid'
+  end
 end

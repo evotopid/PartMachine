@@ -1,20 +1,4 @@
 <% provide(:title, "Category #{@category.name}") %>
 <h2><%= @category.description %></h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-  </tr>
-  <% @category.parts.each do |part| %>
-  <tr>
-    <td><%= part.name %></td>
-    <td><%= part.description %></td>
-  </tr>
-  <% end %>
-</table>
-
-<p>
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
-</p>
+<%= parts_grid @category.parts %>

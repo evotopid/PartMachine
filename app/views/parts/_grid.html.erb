@@ -1,0 +1,24 @@
+<ul id="parts">
+  <% @parts.each do |part| %>
+    <li onclick="redirectTo('<%= part_url part %>')">
+      <div>
+        <span class="title">
+          <%= part.name %>
+        </span>
+        <br>
+        <span class="description">
+          <%= part.description %>
+        </span>
+        <span class="amount">
+          <% if not defined? part.amount or part.amount.nil? %>
+            0x
+          <% else %>
+            <%= part.amount %>x
+          <% end %>
+        </span>
+      </div>
+    </li>
+  <% end %>
+  
+  <li class="new" onclick="redirectTo('<%= new_part_url %>')"></li>
+</ul>
