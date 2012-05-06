@@ -1,0 +1,35 @@
+@mixin square-map($size, $padding) {
+  padding-left: 0px;
+  margin: 5px 0px 0px 0px;
+  
+  li {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    padding: $padding; 
+    border: 1px solid gray;
+    margin-right: 4px;
+    margin-bottom: 10px;
+    
+    vertical-align: top;
+  
+    .title {
+      font-size: 16pt;
+    }
+    
+    div {
+      width: 160px;
+    }
+    
+    background-color: #eeeeee;
+    
+    &:hover {
+      background-color: white;
+    } 
+  }
+  
+  .new {
+    background-image: image-url("add-item.png");
+    background-position: center;
+  }
+}
