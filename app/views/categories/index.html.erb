@@ -14,8 +14,10 @@
       </div>
     </li>
   <% end %>
+  
+  <li onclick="redirectTo('<%= new_category_url %>')">
+    <div>
+      <%= image_tag "add-category.png" %>
+    </div>
+  </li>
 </ol>
-
-<br />
-
-<%= link_to 'New Category', new_category_path %>

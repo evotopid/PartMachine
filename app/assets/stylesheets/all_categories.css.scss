@@ -21,8 +21,15 @@
       width: 160px;
     }
     
+    background-color: #eeeeee;
+    
     &:hover {
       background-color: white;
+    }
+    
+    .add_category_link {
+      font-size: 100pt;
+      vertical-align: top;
     }
   }
 }
