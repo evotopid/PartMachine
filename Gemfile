@@ -10,7 +10,7 @@ group :assets do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'mysql'
 end
 
 group :deployment do
