@@ -2,9 +2,9 @@ PartMachine::Application.routes.draw do
   resources :categories
   resources :parts
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
+  match 'search' => 'parts#index'
+  match 'search/:query' => 'parts#search', as: :search_part
+  
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
@@ -53,7 +53,4 @@ PartMachine::Application.routes.draw do
 
   # See how all your routes lay out with "rake routes"
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
 end
