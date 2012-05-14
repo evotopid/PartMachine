@@ -1,23 +1,23 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem "thinking-sphinx", "~> 2.0.11"
+gem 'thinking-sphinx', '2.0.12'
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails',   '3.2.3'
+  gem 'coffee-rails', '3.2.2'
+  gem 'uglifier', '1.2.4'
 end
 
 group :development do
-  gem 'mysql'
+  gem 'mysql', '2.8.1'
 end
 
 group :deployment do
-  gem 'pg'
+  gem 'pg', '0.13.2'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.0.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
