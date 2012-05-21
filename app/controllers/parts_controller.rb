@@ -41,4 +41,9 @@ class PartsController < ApplicationController
 
     redirect_to parts_url
   end
+  
+  def search
+    @parts = Part.search params[:query]
+    render action: "index"
+  end
 end
