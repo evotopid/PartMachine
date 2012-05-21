@@ -9,12 +9,15 @@
 <body>
 
 <%= render('layouts/header') %>
+
 <div id="container">
  <div>
   <% if not notice.nil? %><p class="notice"><%= notice %></p><% end %>
   <%= yield %>
  </div>
 </div>
+
+<%= render('layouts/footer') %>
 
 </body>
 </html>
