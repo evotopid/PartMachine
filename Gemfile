@@ -10,7 +10,7 @@ group :assets do
 end
 
 group :development do
-  gem 'mysql', '2.8.1'
+  gem 'mysql2', '0.3.11'
 end
 
 group :deployment do

@@ -1,5 +1,5 @@
 development:
-  adapter: mysql
+  adapter: mysql2
   database: partmachine_development
   encoding: utf8
   username: root
@@ -8,7 +8,7 @@ development:
   port: 8889
 
 test:
-  adapter: mysql
+  adapter: mysql2
   database: partmachine_test
   encoding: utf8
   username: root
