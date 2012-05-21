@@ -1,5 +1,5 @@
 <% provide(:title, "All Parts") %>
 
-<%= search_field(:part, :name, {placeholder: "Search for parts"}) %>
+<input type="search" id="search_field" placeholder="Search for parts" onkeyup="window.searchKeyWasPressed('<%= search_part_url("") %>')">
 
 <%= parts_grid @parts %>
