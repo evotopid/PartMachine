@@ -7,8 +7,12 @@
 <input
   type="search"
   id="search_field"
-  placeholder="Search for parts"
-  <%= "value=\"#{@search_query}\"".html_safe if defined? @search_query %>
+  placeholder="Search for parts..."
+  <% if defined? @search_query %>
+    <%= "value=\"#{@search_query}\"".html_safe %>
+    autofocus="autofocus"
+  <% end %>
+  
   onkeyup="window.searchKeyWasPressed('<%= search_part_url("") %>')">
 
 <%= parts_grid @parts %>
