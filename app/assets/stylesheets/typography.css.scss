@@ -1,3 +1,16 @@
 body {
   font-family: Verdana;
 }
+
+.notice {
+    padding: 6px;
+    border: 1px solid green;
+    background-color: #C5DECE;
+}
+
+#error_explanation {
+    border: 1px solid red;
+    padding: 6px;
+    background-color: #E4C4C4;
+    margin-bottom: 12px;
+}
