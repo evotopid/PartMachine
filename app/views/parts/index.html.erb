@@ -1,5 +1,14 @@
-<% provide(:title, "All Parts") %>
+<% if not defined? @search_query %>
+  <% provide(:title, "All Parts") %>
+<% else %>
+  <% provide(:title, "Search Results for \"#{@search_query}\"") %>
+<% end %>
 
-<input type="search" id="search_field" placeholder="Search for parts" onkeyup="window.searchKeyWasPressed('<%= search_part_url("") %>')">
+<input
+  type="search"
+  id="search_field"
+  placeholder="Search for parts"
+  <%= "value=\"#{@search_query}\"".html_safe if defined? @search_query %>
+  onkeyup="window.searchKeyWasPressed('<%= search_part_url("") %>')">
 
 <%= parts_grid @parts %>
