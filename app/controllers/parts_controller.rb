@@ -43,7 +43,7 @@ class PartsController < ApplicationController
   end
   
   def search
-    @parts = Part.search params[:query]
+    @parts = Part.search_for params[:query]
     render action: "index"
   end
 end
