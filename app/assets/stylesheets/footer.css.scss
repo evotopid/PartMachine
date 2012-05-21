@@ -4,12 +4,24 @@
   background-color: black;
     
   font-family: Verdana;
-  font-size: 14pt;    
+  font-size: 12pt;    
   padding: 10px;
   
   div {
     width: 800px;
     margin-left: auto;
     margin-right: auto;
+    display: block;
+    
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+      left: 0px;
+      li {
+        &.title {
+          border-bottom: 1px dotted white;
+        }
+      }
+    }
   }
 }
