@@ -15,5 +15,14 @@
   <%= link_to @part.category.name, @part.category %>
 </p>
 
+<p>
+  <b>Sources:</b>
+  <ul>
+  <% @part.sources.each do |source| %>
+    <li><%= source.name %></li>
+  <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_part_path(@part) %> |
 <%= link_to 'Back', parts_path %>
