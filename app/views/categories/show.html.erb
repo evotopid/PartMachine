@@ -1,4 +1,4 @@
 <% provide(:title, "Category #{@category.name}") %>
 <h2><%= @category.description %></h2>
 
-<%= parts_grid @category.parts %>
+<%= parts_grid @category.parts, @category.id %>

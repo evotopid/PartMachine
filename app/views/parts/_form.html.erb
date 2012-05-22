@@ -11,7 +11,7 @@
   <%= f.text_field :amount %>
   
   <%= f.label :category_id %>
-  <%= f.select :category_id, categories_list %>
+  <%= f.select :category_id, categories_list, selected: @category_id %>
   
   <%= f.submit %>
 <% end %>

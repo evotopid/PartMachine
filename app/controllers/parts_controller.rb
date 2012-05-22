@@ -8,6 +8,12 @@ class PartsController < ApplicationController
   end
 
   def new
+    if defined? params[:category_id]
+      @category_id = params[:category_id]
+    else
+      @category_id = 0
+    end
+    
     @part = Part.new
   end
 

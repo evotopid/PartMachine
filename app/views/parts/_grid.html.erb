@@ -20,5 +20,9 @@
     </li>
   <% end %>
   
-  <li class="new" onclick="redirectTo('<%= new_part_url %>')"></li>
+  <% if @category_id == 0 %>
+    <li class="new" onclick="redirectTo('<%= new_part_url %>')"></li>
+  <% else %>
+    <li class="new" onclick="redirectTo('/categories/<%=@category_id %>/parts/new')"></li>
+  <% end %>
 </ul>

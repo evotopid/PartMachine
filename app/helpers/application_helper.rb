@@ -13,7 +13,8 @@ module ApplicationHelper
     render 'shared/save_error'
   end
   
-  def parts_grid ( parts )
+  def parts_grid ( parts, category_id = 0 )
+    @category_id = category_id
     @parts = parts.sort
     render 'parts/grid'
   end

@@ -1,9 +1,11 @@
 PartMachine::Application.routes.draw do
-  resources :categories
   resources :parts
-
+  resources :categories
+  
   match 'search' => 'parts#index'
   match 'search/:query' => 'parts#search', as: :search_part
+  
+  match 'categories/:category_id/parts/new' => 'parts#new'
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
