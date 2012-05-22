@@ -12,7 +12,6 @@
     <%= "value=\"#{@search_query}\"".html_safe %>
     autofocus="autofocus"
   <% end %>
-  
   onkeyup="window.searchKeyWasPressed('<%= search_part_url("") %>')">
 
 <%= parts_grid @parts %>
