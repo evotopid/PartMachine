@@ -4,7 +4,7 @@ module ApplicationHelper
     if page_title.nil? or page_title.empty?
       title_link.html_safe
     else
-      "#{title_link} > #{page_title}".html_safe
+      "#{title_link} &gt; #{page_title}".html_safe
     end
   end
   
