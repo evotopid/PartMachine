@@ -21,10 +21,21 @@
       margin-right: 30px;
       float: left;
       li {
+        padding-left: 4px;
+        padding-right: 4px;
         &.title {
           border-bottom: 1px dotted white;
+          margin-bottom: 4px;
         }
       }
+    }
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1px solid gray;
     }
   }
 }
