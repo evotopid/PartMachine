@@ -1,28 +1,19 @@
 <% provide(:title, @part.name.capitalize) %>
 
-<p>
-  <b>Description:</b>
-  <%= @part.description %>
-</p>
+<%= property "Description", @part.description %>
+<%= property "Amount", @part.amount %>
+<%= property "Category", link_to(@part.category.name, @part.category) %>
 
-<p>
-  <b>Amount:</b>
-  <%= @part.amount %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= link_to @part.category.name, @part.category %>
-</p>
-
-<p>
-  <b>Sources:</b>
-  <ul>
-  <% @part.sources.each do |source| %>
-    <li><%= source.name %></li>
-  <% end %>
-  </ul>
-</p>
+<div class='property'>
+  <span class='title'>Sources</span>
+  <span class='description'>
+    <ul>
+    <% @part.sources.each do |source| %>
+      <li><%= source.name %></li>
+    <% end %>
+    </ul>
+  </span>
+</div>
 
 <%= link_to 'Edit', edit_part_path(@part) %> |
 <%= link_to 'Back', parts_path %>

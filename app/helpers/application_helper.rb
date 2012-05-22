@@ -18,4 +18,12 @@ module ApplicationHelper
     @parts = parts.sort
     render 'parts/grid'
   end
+  
+  def property ( title, description )
+    res = "<div class='property'>"
+    res += "<span class='title'>#{h title}</span>"
+    res += "<span class='description'>#{h description}</span>"
+    res += "</div>"
+    res.html_safe
+  end
 end
