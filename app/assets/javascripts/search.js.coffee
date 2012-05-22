@@ -1,7 +1,7 @@
 window.searchTimer = null
 
 window.search = (search_url) ->
-  query = $("#search_field").val()
+  query = $("#search_field").val
   redirectTo search_url + query
 
 window.searchKeyWasPressed = (search_url) ->
