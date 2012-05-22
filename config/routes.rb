@@ -1,6 +1,7 @@
 PartMachine::Application.routes.draw do
   resources :parts
   resources :categories
+  resources :sources
   
   match 'search' => 'parts#index'
   match 'search/:query' => 'parts#search', as: :search_part
