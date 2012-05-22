@@ -9,6 +9,11 @@ input[type=text], textarea {
   margin-top: 8px;
   margin-bottom: 8px;
   font-family: Verdana;
+  
+  border: 1px solid gray;
+  &:focus {
+    border: 1px solid blue;
+  }
 }
 
 input[type=text] {
