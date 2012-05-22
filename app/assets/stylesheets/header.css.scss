@@ -1,13 +1,12 @@
 // Colors for the navigation
 $headerTextColor: white;
-$headerBackgroundColor: black;
 
 // Style for the navigation
 #header {
   width: auto;
   
   color: $headerTextColor;
-  background-color: $headerBackgroundColor;
+  background-image: image_url('header-background.png');
     
   font-family: Verdana;
   font-weight: bold;
