@@ -1,21 +1,9 @@
-<h1>Listing sources</h1>
+<% provide(:title, 'All Sources') %>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @sources.each do |source| %>
-  <tr>
-    <td><%= link_to 'Show', source %></td>
-    <td><%= link_to 'Edit', edit_source_path(source) %></td>
-    <td><%= link_to 'Destroy', source, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+<ul>
+  <% @sources.each do |source| %>
+  <li><%= link_to source.name, source %></li>
+  <% end %>
+</ul>
 
 <%= link_to 'New Source', new_source_path %>
