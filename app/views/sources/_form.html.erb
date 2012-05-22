@@ -1,17 +1,11 @@
 <%= form_for(@source) do |f| %>
-  <% if @source.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@source.errors.count, "error") %> prohibited this source from being saved:</h2>
-
-      <ul>
-      <% @source.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= save_errors @source %>
+  
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  
+  <%= f.submit %>
 <% end %>
