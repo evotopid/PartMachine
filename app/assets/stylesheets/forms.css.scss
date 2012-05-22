@@ -1,3 +1,5 @@
+$controlBlue: #00BCFF;
+
 label {
   font-size: 12pt;
 }
@@ -12,7 +14,8 @@ input[type=text], textarea {
   
   border: 1px solid gray;
   &:focus {
-    border: 1px solid blue;
+    border: 1px solid $controlBlue;
+    box-shadow: 0px 0px 4px $controlBlue;
   }
 }
 
