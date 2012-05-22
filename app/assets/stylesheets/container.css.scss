@@ -1,9 +1,5 @@
-// Defintions for the Style
-$lightGray: #dddddd;
-
-// Style for the container
 #container {
-  background-color: $lightGray;
+  background-image: image_url('container-background.png');
   border: 1px solid gray;
   
   padding-top: 2px;
