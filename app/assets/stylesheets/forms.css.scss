@@ -31,6 +31,26 @@ input[type=search] {
   padding: 2px;
 }
 
+input[type=button],
+input[type=submit] {
+  border: 1px solid gray;
+  height: 30px;
+  font-size: 12pt;
+  
+  padding-left: 4px;
+  padding-right: 4px;
+  
+  background-color: #EEEEEE;
+  &:hover {
+    background-color: #CCCCCC;
+    border: 1px solid #00484E;
+  }
+  &:active {
+    background-color: #AAAAAA;
+    border: 1px solid blue;
+  }
+}
+
 select {
   display: block;
   width: 800px;
