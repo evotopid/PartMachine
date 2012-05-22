@@ -21,8 +21,8 @@ module ApplicationHelper
   
   def property ( title, description )
     res = "<div class='property'>"
-    res += "<span class='title'>#{h title}</span>"
-    res += "<span class='description'>#{h description}</span>"
+    res += "<div class='title'>#{h title}</div>"
+    res += "<div class='description'>#{h description}</div>"
     res += "</div>"
     res.html_safe
   end

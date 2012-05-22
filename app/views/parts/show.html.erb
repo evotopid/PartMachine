@@ -5,14 +5,14 @@
 <%= property "Category", link_to(@part.category.name, @part.category) %>
 
 <div class='property'>
-  <span class='title'>Sources</span>
-  <span class='description'>
+  <div class='title'>Sources</div>
+  <div class='description'>
     <ul>
     <% @part.sources.each do |source| %>
       <li><%= source.name %></li>
     <% end %>
     </ul>
-  </span>
+  </div>
 </div>
 
 <%= link_to 'Edit', edit_part_path(@part) %> |

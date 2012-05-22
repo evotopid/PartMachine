@@ -14,3 +14,22 @@ body {
     background-color: #E4C4C4;
     margin-bottom: 12px;
 }
+
+.property {
+  display: block;
+  border: 1px solid gray;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  padding: 5px;
+  
+  background-color: rgba(255,255,255,0.4);
+  
+  .title {
+    display: block;
+    font-size: 15pt;
+  }
+  
+  .description {
+    display: block;
+  }
+}
