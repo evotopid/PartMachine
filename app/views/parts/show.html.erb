@@ -26,7 +26,7 @@
   <span class='title'>Sources</span>
   <ul>
   <% @part.sources.each do |source| %>
-    <li><%= source.name %></li>
+    <li><%= link_to source.name, source %></li>
   <% end %>
   </ul>
   
