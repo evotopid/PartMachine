@@ -24,5 +24,6 @@
   </ul>
 </div>
 
-<%= link_to 'Edit', edit_part_path(@part), class: "button" %>
 <%= link_to 'Back', parts_path, class: "button" %>
+<%= link_to 'Edit', edit_part_path(@part), class: "button" %>
+<%= link_to 'Delete', @part, confirm: "Are you sure?", method: "delete", class: "button" %>
