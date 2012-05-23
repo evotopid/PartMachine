@@ -17,3 +17,15 @@
     box-shadow: 2px 2px 0px 0px darken($controlBlue,10%);
   }
 }
+
+#sources {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 5px;
+  
+  .source {
+    .actions {
+      float: right;
+    }
+  }
+}

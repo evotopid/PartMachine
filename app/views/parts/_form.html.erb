@@ -13,5 +13,18 @@
   <%= f.label :category_id %>
   <%= f.select :category_id, categories_list, selected: @category_id %>
   
+  <%= f.label :sources %>
+  <div id="sources">
+    <% @part.sources.each do |source| %>
+    <div class="source">
+      <%= source.name %>
+      <span class="actions">
+        <%= link_to 'Edit', edit_source_path(source) %>
+        <%= link_to 'Delete', source, method: 'delete', confirm: 'Are you sure?' %>
+      </span>
+    </div>
+    <% end %>
+  </div class="sources">
+  
   <%= f.submit %>
 <% end %>
