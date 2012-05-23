@@ -7,6 +7,7 @@ PartMachine::Application.routes.draw do
   match 'search/:query' => 'parts#search', as: :search_part
   
   match 'categories/:category_id/parts/new' => 'parts#new'
+  match 'parts/:part_id/sources/new' => 'sources#new'
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

@@ -1,4 +1,19 @@
 class SourcesController < ApplicationController
+  
+  def _load_parts
+    parts = Part.all
+    @parts = []
+    parts.each do |part|
+      @parts << [part.name, part.id]
+    end
+    
+    if defined? params[:part_id]
+      @part_id = params[:part_id]
+    else
+      @part_id = 0
+    end
+  end
+  
   def index
     @sources = Source.all
   end
@@ -8,10 +23,14 @@ class SourcesController < ApplicationController
   end
 
   def new
+    _load_parts
+    
     @source = Source.new
   end
 
   def edit
+    _load_parts
+    
     @source = Source.find(params[:id])
   end
 

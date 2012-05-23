@@ -1,7 +1,7 @@
 class Part < ActiveRecord::Base
   attr_accessible :description, :name, :amount, :category_id
   belongs_to :category
-  has_and_belongs_to_many :sources
+  has_many :sources
   
   scoped_search on: [:name, :description]
   

@@ -12,13 +12,13 @@
     <td><%= @source.url %></td>
   </tr>
   <tr>
-    <th>Parts:</th>
+    <th>Part:</th>
     <td>
-      <ul>
-        <% @source.parts.each do |part| %>
-          <li><%= link_to part.name, part %></li>
-        <% end %>
-      </ul>
+      <% if defined? @source.part and not @source.part.nil? %>
+        <%= link_to @source.part.name, @source.part %>
+      <% else %>
+        This source doesn't belong to any part.
+      <% end %>
     </td>
   </tr>
 </table>

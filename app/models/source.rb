@@ -1,4 +1,4 @@
 class Source < ActiveRecord::Base
-  attr_accessible :name, :url
-  has_and_belongs_to_many :parts
+  attr_accessible :name, :url, :part_id
+  belongs_to :part
 end
