@@ -11,4 +11,5 @@
   <%= f.select :part_id, @parts, selected: @part_id, include_blank: true %>
   
   <%= f.submit %>
+  <input type="button" value="Cancel" onclick="history.back();">
 <% end %>
