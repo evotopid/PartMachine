@@ -1,4 +1,5 @@
 @import '_squaremap';
+@import '_colors';
 
 #parts {
   @include square-map(169px, 10px);
@@ -6,11 +7,13 @@
 
 #search_field {
   box-shadow: 2px 2px 0px 0px #777777;
-  -moz-box-shadow: 2px 2px 0px 0px #777777;
-  -webkit-box-shadow: 2px 2px 0px 0px #777777;
   width: 778px;
   margin-top: 8px;
   margin-bottom: 14px;
   color: black;
   padding-left: 10px;
+  
+  &:focus {
+    box-shadow: 2px 2px 0px 0px darken($controlBlue,10%);
+  }
 }
