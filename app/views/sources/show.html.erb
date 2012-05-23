@@ -2,28 +2,27 @@
 
 <p id="notice"><%= notice %></p>
 
-<table>
-  <tr>
-    <th>Name:</th>
-    <td><%= @source.name %></td>
-  </tr>
-  <tr>
-    <th>URL:</th>
-    <td><%= @source.url %></td>
-  </tr>
-  <tr>
-    <th>Part:</th>
-    <td>
-      <% if defined? @source.part and not @source.part.nil? %>
-        <%= link_to @source.part.name, @source.part %>
-      <% else %>
-        This source doesn't belong to any part.
-      <% end %>
-    </td>
-  </tr>
-</table>
+<div class="properties">
+  <div class="property">
+    <span class="title">Name</span>
+    <%= @source.name %>
+  </div>
+  
+  <div class="property">
+    <span class="title">URL</span>
+    <%= @source.url %>
+  </div>
+  
+  <div class="property">
+    <span class="title">Part</span>
+    <% if defined? @source.part and not @source.part.nil? %>
+      <%= link_to @source.part.name, @source.part %>
+      ( <%= @source.part.amount %> parts in your inventory )
+    <% else %>
+      This source doesn't belong to any part.
+    <% end %>
+  </div>
+</div>
 
-<br>
-
-<%= link_to 'Edit', edit_source_path(@source) %> |
-<%= link_to 'Back', sources_path %>
+<%= link_to 'Back', sources_path, class: "button" %>
+<%= link_to 'Edit', edit_source_path(@source), class: "button" %>
