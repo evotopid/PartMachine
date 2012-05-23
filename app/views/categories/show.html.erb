@@ -2,3 +2,5 @@
 <h2><%= @category.description %></h2>
 
 <%= parts_grid @category.parts, @category.id %>
+
+<%= link_to "Edit", edit_category_path(@category), class: "button" %>
