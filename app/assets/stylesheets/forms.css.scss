@@ -4,7 +4,9 @@ label {
   font-size: 12pt;
 }
 
-input[type=text], textarea {
+input[type=text],
+select,
+textarea {
   display: block;
   width: 800px;
   font-size: 14pt;
@@ -49,6 +51,9 @@ input[type=submit] {
 select {
   display: block;
   width: 800px;
+  background-color: white;
+  border: 1px solid gray;
+  height: 30px;
 }
 
 textarea {
