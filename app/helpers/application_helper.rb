@@ -18,4 +18,9 @@ module ApplicationHelper
     @parts = parts.sort
     render 'parts/grid'
   end
+  
+  def htmlize_string ( unsave_str )
+    str = h unsave_str.strip
+    str.gsub(/\n/, "<br>\n").html_safe
+  end
 end
