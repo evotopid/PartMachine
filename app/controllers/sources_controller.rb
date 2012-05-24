@@ -40,7 +40,8 @@ class SourcesController < ApplicationController
     if @source.save
       redirect_to @source, notice: 'Source was successfully created.'
     else
-      format.html { render action: "new" }
+      _load_parts
+      render action: "new"
     end
   end
   
