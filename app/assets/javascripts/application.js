@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require facebox
+//= require faceboxSetup
 //= require_tree .
