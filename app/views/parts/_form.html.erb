@@ -26,9 +26,14 @@
     <% end %>
     
     <% if @part.sources.count == 0 %>
-      There are currently no sources listed.
+      There are currently no sources listed.<br>
     <% end %>
-  </div class="sources">
+    
+    <div class="general_buttons">
+      <%= link_to "Select", "javascript:alert('not yet implemented');" %>
+      <%= link_to "Create", "/parts/#{@part.id}/sources/new" %>
+    </div>
+  </div>
   
   <%= f.submit %>
 <% end %>

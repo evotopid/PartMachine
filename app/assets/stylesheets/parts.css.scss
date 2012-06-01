@@ -29,3 +29,16 @@
     }
   }
 }
+
+#sources {
+  .general_buttons {
+    margin-top: 8px;
+  
+    a:link, a:visited, a:hover, a:active {
+      background-color: #eeeeee;
+      border: 1px solid gray;
+      padding: 0 3px 0 3px;
+      border-radius: 3px;
+    }
+  }
+}
