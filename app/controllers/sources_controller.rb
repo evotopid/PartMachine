@@ -32,6 +32,7 @@ class SourcesController < ApplicationController
     _load_parts
     
     @source = Source.find(params[:id])
+    @part_id = @source.part_id
   end
 
   def create
