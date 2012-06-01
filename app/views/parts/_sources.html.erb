@@ -15,6 +15,11 @@
   
   <div class="general_buttons">
     <%= link_to "Select", "javascript:alert('not yet implemented');" %>
-    <%= link_to "Create", "/parts/#{@part.id}/sources/new/?footerless=true", "data-popup" => true %>
+    
+    <% if @part.id %>
+      <%= link_to "Create", "/parts/#{@part.id}/sources/new/?footerless=true", "data-popup" => true %>
+    <% else %>
+      It currently isn't possible to add sources to a uncreated part.
+    <% end %>
   </div>
 </div>
