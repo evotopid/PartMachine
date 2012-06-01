@@ -24,6 +24,10 @@
       </span>
     </div>
     <% end %>
+    
+    <% if @part.sources.count == 0 %>
+      There are currently no sources listed.
+    <% end %>
   </div class="sources">
   
   <%= f.submit %>
