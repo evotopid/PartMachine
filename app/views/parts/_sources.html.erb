@@ -9,7 +9,7 @@
   </div>
   <% end %>
   
-  <% if @part.sources.count == 0 %>
+  <% if not defined? @part.sources or @part.sources.nil? or @part.sources.size == 0 %>
     There are currently no sources listed.<br>
   <% end %>
   
