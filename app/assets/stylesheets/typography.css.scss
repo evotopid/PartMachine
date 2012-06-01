@@ -33,6 +33,9 @@ a:hover {
   padding: 5px;
   
   background-color: rgba(255,255,255,0.4);
+  box-shadow: 2px 2px 0px 0px #999999;
+  -moz-box-shadow: 2px 2px 0px 0px #999999;
+  -webkit-box-shadow: 2px 2px 0px 0px #999999;
   
   .title {
     display: block;
