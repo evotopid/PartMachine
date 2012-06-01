@@ -14,6 +14,14 @@ class SourcesController < ApplicationController
     end
   end
   
+  def _select_layout
+    if defined? params[:layout]
+      if params[:layout] == "popup"
+        render layout: "popup"
+      end
+    end
+  end
+  
   def index
     @sources = Source.all
   end
@@ -26,6 +34,7 @@ class SourcesController < ApplicationController
     _load_parts
     
     @source = Source.new
+    _select_layout
   end
 
   def edit

@@ -17,7 +17,7 @@
     <%= link_to "Select", "javascript:alert('not yet implemented');" %>
     
     <% if @part.id %>
-      <%= link_to "Create", "/parts/#{@part.id}/sources/new/?footerless=true", "data-popup" => true %>
+      <%= link_to "Create", "/parts/#{@part.id}/sources/new/?layout=popup", "data-popup" => true %>
     <% else %>
       It currently isn't possible to add sources to a uncreated part.
     <% end %>
