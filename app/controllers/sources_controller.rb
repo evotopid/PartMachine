@@ -60,6 +60,6 @@ class SourcesController < ApplicationController
     @source = Source.find(params[:id])
     @source.destroy
 
-    redirect_to sources_url
+    redirect_to :back, notice: 'Source was successfully deleted.'
   end
 end
