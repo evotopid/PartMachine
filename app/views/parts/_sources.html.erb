@@ -1,0 +1,20 @@
+<div id="sources">
+  <% @part.sources.each do |source| %>
+  <div class="source">
+    <%= source.name %>
+    <span class="actions">
+      <%= link_to 'Edit', edit_source_path(source) %>
+      <%= link_to 'Delete', source, method: 'delete', confirm: 'Are you sure?' %>
+    </span>
+  </div>
+  <% end %>
+  
+  <% if @part.sources.count == 0 %>
+    There are currently no sources listed.<br>
+  <% end %>
+  
+  <div class="general_buttons">
+    <%= link_to "Select", "javascript:alert('not yet implemented');" %>
+    <%= link_to "Create", "/parts/#{@part.id}/sources/new" %>
+  </div>
+</div>

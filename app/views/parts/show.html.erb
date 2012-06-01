@@ -17,16 +17,7 @@
 
 <div class='property'>
   <span class='title'>Sources</span>
-  <ul>
-  <% @part.sources.each do |source| %>
-    <li><%= link_to source.name, source %></li>
-  <% end %>
-  </ul>
-  
-  <div class='actions'>
-    <%= link_to "Select existing", "#", class: "button" %>
-    <%= link_to "Create new", "/parts/#{@part.id}/sources/new", class: "button" %>
-  </div>
+  <%= render 'parts/sources' %>
 </div>
 
 <%= link_to 'Back', parts_path, class: "button" %>
