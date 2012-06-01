@@ -46,12 +46,11 @@ class SourcesController < ApplicationController
 
   def create
     @source = Source.new(params[:source])
-
+    
     if @source.save
-      redirect_to @source, notice: 'Source was successfully created.'
+      render json: {type: "success", message: "Source was successfully created.", source: @source}
     else
-      _load_parts
-      render action: "new"
+      render json: {type: "fail", message: "There are some errors.", errors: @source.errors}
     end
   end
   
