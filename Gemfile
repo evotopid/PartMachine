@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.4'
 gem 'scoped_search', '2.3.7'
 
 group :assets do
