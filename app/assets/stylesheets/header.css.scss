@@ -1,7 +1,5 @@
-// Colors for the navigation
-$headerTextColor: white;
+@import 'colors';
 
-// Style for the navigation
 #header {
   width: auto;
   
@@ -29,6 +27,8 @@ $headerTextColor: white;
         font-size: 15pt;
         color: $headerTextColor;
         text-decoration:none;
+        
+        text-shadow: 0px 0px 10px #EEEEEE;
       }
       a:hover {
         color: darken($headerTextColor,30%);
