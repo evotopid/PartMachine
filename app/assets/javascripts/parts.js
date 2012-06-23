@@ -6,6 +6,9 @@ function part_refresh_sources() {
     success: function (response) {
       // now display the sources
       $("#sources").html($("#sources", response).html());
+      
+      // and 
+      listenToPopups();
     }
   });
 }

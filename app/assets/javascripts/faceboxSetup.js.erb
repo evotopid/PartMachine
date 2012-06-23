@@ -1,6 +1,10 @@
+function listenToPopups() {
+  $("a[data-popup=true]").facebox();
+}
+
 $(document).ready(function() {
   $.facebox.settings.closeImage = "<%= asset_path('closelabel.png') %>";
   $.facebox.settings.loadingImage = "<%= asset_path('loading.gif') %>";
   
-  $("a[data-popup=true]").facebox();
+  listenToPopups();
 });
