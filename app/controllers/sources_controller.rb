@@ -1,6 +1,6 @@
 class SourcesController < ApplicationController
   
-  def _load_parts
+  def load_parts
     parts = Part.all
     @parts = []
     parts.each do |part|
@@ -14,14 +14,6 @@ class SourcesController < ApplicationController
     end
   end
   
-  def _select_layout
-    if defined? params[:layout]
-      if params[:layout] == "popup"
-        render layout: "popup"
-      end
-    end
-  end
-  
   def index
     @sources = Source.all
   end
@@ -31,17 +23,18 @@ class SourcesController < ApplicationController
   end
 
   def new
-    _load_parts
+    load_parts
     
     @source = Source.new
-    _select_layout
+    auto_select_layout
   end
 
   def edit
-    _load_parts
+    load_parts
     
     @source = Source.find(params[:id])
     @part_id = @source.part_id
+    auto_select_layout
   end
 
   def create
