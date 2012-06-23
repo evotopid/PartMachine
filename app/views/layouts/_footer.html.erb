@@ -3,13 +3,13 @@
     <ul>
       <li class="title">Pages</li>
       <li><%= link_to "Part list", parts_path %></li>
-      <li><%= link_to "Category list", categories_path %></li>
       <li><%= link_to "Source list", sources_path %></li>
     </ul>
     <ul>
-      <li class="title">Placeholder</li>
-      <li>Just a placeholder</li>
-      <li>Just a placeholder</li>
+      <li class="title"><%= link_to "Categories", categories_path %></li>
+      <% @categories.each do |category| %>
+        <li><%= link_to category.name, category %>
+      <% end %>
     </ul>
   </div>
 </div>
