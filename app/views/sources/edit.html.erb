@@ -1,2 +1,9 @@
 <% provide :title, "Edit Source" %>
+
+<div id="ajax_errors"></div>
+
 <%= render 'form' %>
+
+<script type="text/javascript">
+bind_edit_source_ajax_success();
+</script>

@@ -43,17 +43,17 @@ class SourcesController < ApplicationController
     if @source.save
       render json: {type: "success", message: "Source was successfully created.", source: @source}
     else
-      render json: {type: "fail", message: "There are some errors.", errors: @source.errors}
+      render json: {type: "fail", message: "There were some errors.", errors: @source.errors}
     end
   end
   
   def update
     @source = Source.find(params[:id])
 
-    if @source.update_attributes(params[:source])
-      redirect_to @source, notice: 'Source was successfully updated.'
+    if @source.update_attributes params[:source]
+      render json: {type: "success", message: "Source was successfully updated.", source: @source}
     else
-      render action: "edit"
+      render json: {type: "fail", message: "There were some errors.", errors: @source.errors}
     end
   end
   
