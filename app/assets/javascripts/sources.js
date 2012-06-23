@@ -35,6 +35,27 @@ function bind_new_source_ajax_success() {
   });
 }
 
+function delete_source (source_path) {
+  // first let the user confirm
+  ok = confirm("Are you sure you want to delete that source, that action can't be undone!");
+  if (ok) {
+    // start an ajax request
+    $.ajax({
+      url: source_path,
+      type: 'DELETE',
+      dataType: 'json',
+      success: function (response) {
+        if (response.type == 'success') {
+          show_notice(response.message);
+          part_refresh_sources();
+        } else {
+          alert("Got error while deleting: "+response.message);
+        }
+      }
+    });
+  }
+}
+
 $(document).ready(function(){
   bind_new_source_ajax_success();
 });

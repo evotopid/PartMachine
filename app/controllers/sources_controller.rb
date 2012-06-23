@@ -68,6 +68,10 @@ class SourcesController < ApplicationController
     @source = Source.find(params[:id])
     @source.destroy
 
-    redirect_to :back, notice: 'Source was successfully deleted.'
+    respond_to do |format|
+      format.html { redirect_to :back, notice: 'Source was successfully deleted.' }
+      format.json { render json: {type: "success", message: "Source was successfully deleted." } }
+    end
+    
   end
 end
