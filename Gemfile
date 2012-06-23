@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.5'
+gem 'rails', '3.2.6'
 gem 'scoped_search', '2.3.7'
 
 group :assets do
   gem 'sass-rails',   '3.2.5'
   gem 'coffee-rails', '3.2.2'
-  gem 'uglifier', '1.2.4'
+  gem 'uglifier', '1.2.5'
 end
 
 group :development do
