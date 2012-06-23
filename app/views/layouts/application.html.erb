@@ -12,7 +12,10 @@
 
 <div id="container">
  <div>
-  <% if not notice.nil? %><p class="notice"><%= notice %></p><% end %>
+  <div id="alerts">
+    <% if not notice.nil? %><p class="notice"><%= notice %></p><% end %>
+  </div>
+  
   <%= yield %>
  </div>
 </div>
