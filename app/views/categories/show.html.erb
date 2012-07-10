@@ -3,4 +3,5 @@
 
 <%= parts_grid @category.parts, @category.id %>
 
+<%= link_to "Delete", category_path(@category), method: "delete", confirm: "Are you sure that you will delete that category?", class: "button" %>
 <%= link_to "Edit", edit_category_path(@category), class: "button" %>
