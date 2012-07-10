@@ -12,7 +12,11 @@
 
 <div class="property">
   <span class="title">Category</span>
-  <%= link_to @part.category.name, @part.category %>
+  <% if not @part.category.nil? %>
+    <%= link_to @part.category.name, @part.category %>
+  <% else %>
+    The category for this part weren't found.
+  <% end %>
 </div>
 
 <div class='property'>
