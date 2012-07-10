@@ -12,3 +12,12 @@ function part_refresh_sources() {
     }
   });
 }
+
+function cancelEditPartButtonPressed() {
+	// ask the user if he's sure that he want's to leave the
+	// unsaved data in this form
+	ok = confirm("Are you sure that you want to canel? If you cancel all the data you entered will be lost.");
+	if (ok) {
+		history.back();
+	}
+}
