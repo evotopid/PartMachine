@@ -11,6 +11,12 @@ if you find a feature that isn't implemented right now or a bug you can fill of 
 an issue in the Github issue tracker, but it could be possible that I'm already working
 on that.
 
+Live Demo
+=========
+If you want to see a live online demo of this project, you can try out a Heroku hosted
+instance of this app here:
+http://partmachine.herokuapp.com/
+
 License
 =======
 
