@@ -1,3 +1,8 @@
+Warning
+=======
+This project is anything but in active development. I'll keep it here until I know what to do
+with it. Actually I guess I'm just keeping it, because it was my first real ruby (on rails) project.
+
 Project Description
 ===================
 
